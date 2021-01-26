@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
+/* if background color is/or remains constant throughout-wherever used primary color */
+/* defined scope using root scope - custom properties */
+:root {
+  --primary-color: #047aed;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -29,8 +35,10 @@ p {
 img {
   width: 100%;
 }
+/*Navbar*/
+
 .navbar {
-  background-color: #047aed;
+  background-color: var(--primary-color);
   color: #fff;
   height: 70px;
 }
@@ -52,6 +60,21 @@ img {
 .navbar.flex {
   justify-content: space-between;
 }
+
+/* Showcase */
+
+.showcase {
+  height: 400px;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: relative;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+/*Utilities*/
 
 .container {
   max-width: 1100px;

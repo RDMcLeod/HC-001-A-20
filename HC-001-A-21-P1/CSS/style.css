@@ -77,8 +77,19 @@ img {
   margin: 20px 0;
 }
 .showcase .grid {
+  /* overflow of form set to overlap to lower color background */
+  overflow: visible;
   grid-template-columns: 55% 45%;
   gap: 30px;
+}
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
 }
 
 /*Utilities*/
@@ -89,6 +100,16 @@ img {
   overflow: auto;
   padding: 0 40px;
 }
+/* white card with Request a demo */
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+
 .flex {
   display: flex;
   justify-content: space-between;

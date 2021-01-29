@@ -104,8 +104,9 @@ img {
   padding: 3px;
   font-size: 16px;
 }
+
 /* getting rid of ugly border on form inputs */
-.showcase-form input: :focus {
+.showcase-form input :focus {
   outline: none;
 }
 
@@ -117,6 +118,7 @@ img {
   overflow: auto;
   padding: 0 40px;
 }
+
 /* white card with Request a demo */
 .card {
   background-color: #fff;
@@ -125,6 +127,26 @@ img {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   margin: 10px;
+}
+
+/* Button (send) Styling - for demo card */
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+/* read more button in showcase*/
+.btn-outline {
+  background-color: transparent;
+  border: 1px #fff solid;
+}
+/* send input button - default value for shrinking is 1 */
+.btn:hover {
+  transform: scale(0.98);
 }
 
 .flex {

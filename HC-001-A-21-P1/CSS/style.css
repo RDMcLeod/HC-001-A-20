@@ -119,12 +119,16 @@ img {
   bottom: -70px;
   right: 0;
   left: 0;
-  background: red;
+  background: #fff;
   transform: skewY(-3deg);
   -webkit-transform: skewY(-3deg);
   -moz-transform: skewY(-3deg);
   -ms-transform: skewY(-3deg);
-  /* above transforms (-) added to cover the browsers and mobile */
+  /* above transforms (-) added to cover the browsers and mobile - start with a red to position*/
+}
+/* Stats */
+.stats {
+  padding-top: 100px;
 }
 
 /*Utilities*/

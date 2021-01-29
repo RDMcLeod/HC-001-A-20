@@ -110,6 +110,23 @@ img {
   outline: none;
 }
 
+/* adding slant to showcase */
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: red;
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+  /* above transforms (-) added to cover the browsers and mobile */
+}
+
 /*Utilities*/
 
 .container {

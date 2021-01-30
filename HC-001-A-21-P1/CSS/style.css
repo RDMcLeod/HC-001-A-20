@@ -126,61 +126,8 @@ img {
   -ms-transform: skewY(-3deg);
   /* above transforms (-) added to cover the browsers and mobile - start with a red to position*/
 }
+/* this will push the stats out fro under showcase skewed line */
 /* Stats */
 .stats {
   padding-top: 100px;
-}
-
-/*Utilities*/
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  overflow: auto;
-  padding: 0 40px;
-}
-
-/* white card with Request a demo */
-.card {
-  background-color: #fff;
-  color: #333;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin: 10px;
-}
-
-/* Button (send) Styling - for demo card */
-.btn {
-  display: inline-block;
-  padding: 10px 30px;
-  cursor: pointer;
-  background: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-}
-/* read more button in showcase*/
-.btn-outline {
-  background-color: transparent;
-  border: 1px #fff solid;
-}
-/* send input button - default value for shrinking is 1 */
-.btn:hover {
-  transform: scale(0.98);
-}
-
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
 }

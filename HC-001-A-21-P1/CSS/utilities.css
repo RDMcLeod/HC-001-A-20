@@ -56,9 +56,10 @@
   align-items: center;
   height: 100%;
 }
-/* sets stats icons on one line 3 eq spaced */
+
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
+  /* sets stats icons on one line 3 eq spaced */
 }
 /* Margin */
 .my-1 {

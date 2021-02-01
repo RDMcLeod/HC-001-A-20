@@ -36,6 +36,27 @@
 .btn:hover {
   transform: scale(0.98);
 }
+/* Backgrounds and Colored Buttons */
+.bg.primary,
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.bg.secondary,
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+.bg.dark,
+.btn-dark {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+.bg.light,
+.btn-light {
+  background-color: var(--light-color);
+  color: #333;
+}
 
 /* flex and grid at bottom */
 .text-center {
@@ -50,7 +71,7 @@
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-content: center;
   align-items: center;

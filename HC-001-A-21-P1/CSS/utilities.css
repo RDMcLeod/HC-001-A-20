@@ -58,6 +58,22 @@
   color: #333;
 }
 
+/* Text Sizes */
+.lead {
+  font-size: 20px;
+}
+.sm {
+  font-size: 1rem;
+}
+.md {
+  font-size: 32rem;
+}
+.lg {
+  font-size: 3rem;
+}
+.xl {
+  font-size: 4rem;
+}
 /* flex and grid at bottom */
 .text-center {
   text-align: center;

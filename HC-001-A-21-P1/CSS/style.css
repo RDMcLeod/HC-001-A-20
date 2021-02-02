@@ -82,9 +82,14 @@ img {
 .showcase .grid {
   /* overflow of form set to overlap to lower color background */
   overflow: visible;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 55% auto;
   gap: 30px;
 }
+
+.showcase-text {
+  animation: slideInFromLeft 1s ease-in;
+}
+
 .showcase-form {
   position: relative;
   top: 60px;
@@ -93,6 +98,7 @@ img {
   padding: 40px;
   z-index: 100;
   justify-self: flex-end;
+  animation: slideInFromRight 1s ease-in;
 }
 /* spacing between input on form */
 .showcase-form .form-control {
@@ -133,7 +139,8 @@ img {
 /* Stats */
 .stats {
   padding-top: 100px;
-  /* this will push the stats out fro under showcase skewed line */
+  animation: slideInFromBottom 1s ease-in;
+  /* padding will push the stats out fro under showcase skewed line */
 }
 .stats-heading {
   max-width: 500px;
@@ -157,7 +164,7 @@ img {
   grid-row: 1 / span 2;
 }
 /* Cloud */
-.cloud.grid {
+.cloud .grid {
   grid-template-columns: 4fr 3fr;
 }
 /* Languages */
@@ -179,4 +186,29 @@ img {
 /* Footer */
 .footer.social a {
   margin: 0 10px;
+}
+/* Tablets and Under */
+@media (max-width: 768px) {
+  .grid,
+  .showcase.grid,
+  .stats.grid,
+  .cli.grid,
+  .cloud.grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .navbar {
+    height: 110px;
+  }
+  .navbar.flex {
+    flex-direction: column;
+  }
+  .navbar ul {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }

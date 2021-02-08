@@ -98,7 +98,14 @@
 .alert i {
   margin-right: 10px;
 }
-
+.alert-sucess {
+  background-color: var(--success-color);
+  color: #fff;
+}
+.alert-error {
+  background-color: var(--error-color);
+  color: #fff;
+}
 .flex {
   display: flex;
   justify-content: space-between;

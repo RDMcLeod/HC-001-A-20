@@ -1,6 +1,13 @@
 /* !FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap');
 /* !BASE STYLES/RESET */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
 
 :root{
     --light-color: #f3f3fe;
@@ -12,6 +19,13 @@
     --container-padding: 1.5rem;
     --section-vertical-spacing: 8rem;
 }
+html{
+    font-size: 62.5%;
+}
+
+
+
+
 /* 
 ?RADIAL GRADIENT
 ?background: radial-gradient(50% 50% at 50% 50%, rgba(255, 101, 118, .08) 0%, rgba(255, 101, 118, 0) 100%); 

@@ -20,9 +20,15 @@
     --section-vertical-spacing: 8rem;
 }
 html{
+     /*10px*/
     font-size: 62.5%;
 }
+body{
+    font-family: var(--body-font-family);
+    font-size: 1.6rem;
+    line-height: 1.5;
 
+}
 
 
 

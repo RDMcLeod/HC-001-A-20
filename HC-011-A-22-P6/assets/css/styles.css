@@ -70,9 +70,48 @@ textarea{
 ?RADIAL GRADIENT
 ?background: radial-gradient(50% 50% at 50% 50%, rgba(255, 101, 118, .08) 0%, rgba(255, 101, 118, 0) 100%); 
 */
-/* !REUSABLE CLASSES */
 
+/* !REUSABLE CLASSES */
+.container{
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
 /* !HEADER */
+.header{
+    margin-bottom: 5rem;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 8rem;
+    position: relative;
+}
+.logo{
+    font-family: var(--title-font-family);
+    font-size: 3rem;
+    font-weight: 600;
+}
+.navbar-buttons{
+    display: flex;
+    column-gap: .5rem;
+    padding: 0 .5rem;
+    background-color: var(--dark-color);
+    color:var(--light-color);
+    border-radius: .4rem;
+    position: relative;
+    z-index: 999;
+}    
+.button{
+    cursor: pointer;
+}
+icon-button{
+   width: 4rem;
+   height: 4rem; 
+   display: flex;
+}
+
 
 /* !JAVASCRIPT STYLES */
 

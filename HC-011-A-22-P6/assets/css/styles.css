@@ -111,6 +111,45 @@ icon-button{
    height: 4rem; 
    display: flex;
 }
+.icon-button i{
+    margin: auto;
+}
+.close-icon,
+.theme-on{
+    display: none;
+}
+.menu{
+    position: absolute;
+    right: 1.55rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: .8rem 1.5rem;
+    border-radius: .4rem;
+    z-index: -1;
+    pointer-events: none;
+    transform: scale(0);
+    transition: transform .25s .25s cubic-bezier(1,0,0,1);
+}
+.list{
+    display: flex;
+    gap: 2.5rem;
+}
+.menu > .list .list-link{
+    text-transform: uppercase;
+}
+.list-link{
+    font-size: 1.4rem;
+}
+.list-link:hover,
+.list-link:focus{
+    opacity: .7;
+}
+.list-link span{
+    font-weight: bold;
+}
+
+
+
 
 
 /* !JAVASCRIPT STYLES */

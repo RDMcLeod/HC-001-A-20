@@ -128,6 +128,7 @@ icon-button{
     /*z-index: -1;*/
     pointer-events: none;
     transform: scale(0);
+    transform-origin: right;
     transition: transform .25s .25s cubic-bezier(1,0,0,1);
 }
 .list{
@@ -153,7 +154,7 @@ icon-button{
 /* !JAVASCRIPT STYLES */
 
 .active.menu{
-    /*z-index: initial;*/
+    z-index: initial;
     pointer-events: initial;
     transform: scale(1) translateY(4.5rem);
 }
@@ -162,9 +163,13 @@ icon-button{
     opacity: 1;
     transition: opacity .1s .5s;
 }
+.active.open-icon{
+    display: none;
+}
 
-
-
+.active .close-icon{
+    display: block;
+}
 
 
 /* !HERO STYLES*/

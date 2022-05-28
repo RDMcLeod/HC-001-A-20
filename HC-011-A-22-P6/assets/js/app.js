@@ -8,10 +8,15 @@ const toggleMenu = () => {
 }
 menuToggleButton.addEventListener('click', toggleMenu)
 
-
-
-
 // !REMOVE ACTIVE CLASS FROM AND ICON ON LINK CLICK
+const removeActiveLinkClass = e => {
+    if(e.target.classlist.contains('list-link')){
+    menuElement.classList.remove('active')
+    menuToggleButton.classList.toggle('active')
+    }
+}
+document.addEventListener('click',removeActiveLinkClass);
+
 
 // !TOGGLE THEME AND STORE SELECTION WITHIN LOCAL STORAGE
 

@@ -20,11 +20,21 @@ document.addEventListener('click',removeActiveLinkClass);
 // !TOGGLE THEME AND STORE SELECTION WITHIN LOCAL STORAGE
 const themeToggleButton= document.querySelector('theme-toggle-button');
 const bodyElement = document.body;
+const currentTheme = localStorage.getItem('dark-theme');
+
+if(currentTheme){
+    bodyElement.classlist.add('dark-theme');
+}
 
 const toggleTheme = () => {
     bodyElement.classList.toggle('dark-theme');
-}
 
+    if(bodyElement.classlist.toggle('dark-theme')){
+        localStorage.setItem('darkTheme','active');
+    }else
+    localStorage.removeItem('darkTheme');
+}
+themeToggleButton.addEventListener('click', toggleTheme);
 
 
 

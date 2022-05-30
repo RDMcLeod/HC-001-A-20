@@ -77,6 +77,11 @@ textarea{
     margin: 0 auto;
     padding: 0 var(--container-padding);
 }
+.section{
+    padding-block:var(--section-vertical-spacing);
+    position:relative
+}
+
 /* !HEADER */
 .header{
     margin-bottom: 5rem;
@@ -176,12 +181,9 @@ icon-button{
 .dark-theme .theme-on{
     display: block;
 }
-
-
-
-
-
 /* !HERO STYLES*/
+
+
 
 /* !ABOUT ME STYLES */
 

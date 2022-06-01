@@ -194,14 +194,35 @@ icon-button{
 .inline-image{
     width: 7rem;
     height: 7rem;
-    background: url('../iamges/statue_hero.png') top center no-repeat;
+    background: url('../images/statue_hero.png') top center no-repeat;
     background-size: cover;
     border-radius: 50%;
     border-bottom-left-radius:0;
+    margin: 0 1.5rem;
 }
-
-
-
+.has-sparkles,
+.has-sparkles-alt{
+    position: relative;
+}
+.has-sparkles::before,
+.has-sparkles::after{
+    content:'';
+    position:absolute;
+    background: url('../images/sparkle_light.png') top center no-repeat;
+    background-size: cover;
+}
+inline-image.has-sparkles::before{
+    width: 1rem;
+    height: 1rem;
+    top: -.5rem;
+    right: -.5rem;
+}
+inline-image.has-sparkles::after{
+    width: .8rem;
+    height: .8rem;
+    bottom:1rem;
+    right:-1.5rem;
+}
 
 
 /* !ABOUT ME STYLES */

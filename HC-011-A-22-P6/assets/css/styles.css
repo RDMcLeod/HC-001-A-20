@@ -81,7 +81,18 @@ textarea{
     padding-block:var(--section-vertical-spacing);
     position:relative
 }
-
+.has-sparkles::before,
+.has-sparkles::after{
+    content:'';
+    position:absolute;
+    background: url('../images/sparkle.png') top center no-repeat;
+    background-size: cover;
+}
+.dark-theme .has-sparkles::before,
+.dark-theme .has-sparkles::after{
+    background: url('../images/sparkle_light.png') top center no-repeat;
+    background-size: cover;
+}
 /* !HEADER */
 .header{
     margin-bottom: 5rem;
@@ -204,13 +215,8 @@ icon-button{
 .has-sparkles-alt{
     position: relative;
 }
-.has-sparkles::before,
-.has-sparkles::after{
-    content:'';
-    position:absolute;
-    background: url('../images/sparkle_light.png') top center no-repeat;
-    background-size: cover;
-}
+
+
 inline-image.has-sparkles::before{
     width: 1rem;
     height: 1rem;

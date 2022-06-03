@@ -81,6 +81,10 @@ textarea{
     padding-block:var(--section-vertical-spacing);
     position:relative
 }
+.has-sparkles,
+.has-sparkles-alt{
+    position: relative;
+}
 .has-sparkles::before,
 .has-sparkles::after{
     content:'';
@@ -88,11 +92,7 @@ textarea{
     background: url('../images/sparkle.png') top center no-repeat;
     background-size: cover;
 }
-.dark-theme .has-sparkles::before,
-.dark-theme .has-sparkles::after{
-    background: url('../images/sparkle_light.png') top center no-repeat;
-    background-size: cover;
-}
+
 /* !HEADER */
 .header{
     margin-bottom: 5rem;
@@ -211,11 +211,13 @@ icon-button{
     border-bottom-left-radius:0;
     margin: 0 1.5rem;
 }
-.has-sparkles,
-.has-sparkles-alt{
-    position: relative;
-}
 
+
+.dark-theme .has-sparkles::before,
+.dark-theme .has-sparkles::after{
+    background: url('../images/sparkle_light.png') top center no-repeat;
+    background-size: cover;
+}
 
 inline-image.has-sparkles::before{
     width: 1rem;
@@ -229,6 +231,14 @@ inline-image.has-sparkles::after{
     bottom:1rem;
     right:-1.5rem;
 }
+.has-sparkles-alt{
+    content:'';
+    position:absolute;
+    /*top:50%;*/
+   
+}
+
+
 
 
 /* !ABOUT ME STYLES */

@@ -92,6 +92,9 @@ textarea{
     background: url('../images/sparkle.png') top center no-repeat;
     background-size: cover;
 }
+.d-grid{
+    display: grid;
+}
 
 /* !HEADER */
 .header{
@@ -248,9 +251,19 @@ inline-image.has-sparkles::after{
     background-size: cover;
 }
 
-
-
 /* !ABOUT ME STYLES */
+.section:not(.hero)::before{
+content: '';
+position: absolute;
+top: 35%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 80vw;
+height: 80;
+background: radial-gradient(50% 50% at 50% 50%, rgba(255,101,118,.08)0%, rgba(255,101,118,0) 100%);
+}
+
+
 
 /* !PORTFOLIO STYLES */
 

@@ -81,6 +81,18 @@ textarea{
     padding-block:var(--section-vertical-spacing);
     position:relative
 }
+.section:not(.hero)::before{
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255,101,118,.08)0%, rgba(255,101,118,0) 100%);
+    z-index: -1;
+    }
+
 .has-sparkles,
 .has-sparkles-alt{
     position: relative;
@@ -252,17 +264,46 @@ inline-image.has-sparkles::after{
 }
 
 /* !ABOUT ME STYLES */
-.section:not(.hero)::before{
-content: '';
-position: absolute;
-top: 35%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 80vw;
-height: 80;
-background: radial-gradient(50% 50% at 50% 50%, rgba(255,101,118,.08)0%, rgba(255,101,118,0) 100%);
+.section-description{
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+.description{
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.text-bold{
+    font-weight: bold;
+}
+.description-image{
+    width:25rem;
+    height:25rem;
+    margin: 0 auto;
+    transform: rotate(25deg);
+}
+.description-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.description-image.has-sparkles::before,
+.description-image.has-sparkles::after{
+    width: 2rem;
+    height: 2rem;
+}
+description-image.has-sparkles::before{
+    top: 2rem;
+    right: 1rem;
 }
 
+
+.description-image.has-sparkles::after{
+    top: 10rem;
+    right: -1rem;
+}
+.tech-stack{
+    max-width: 50rem;
+}
 
 
 /* !PORTFOLIO STYLES */

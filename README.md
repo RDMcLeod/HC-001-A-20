@@ -1,5 +1,7 @@
 # HC-001-A-20
 
+2022-06-30-added project folder HC-023-A-22-P12
+
 2022-06-26-added project folder HC-021-A-22-P11
 
 2022-06-20-added project folder HC-019-A-22-P10

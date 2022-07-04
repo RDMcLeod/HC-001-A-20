@@ -364,9 +364,21 @@ description-image.has-sparkles::before{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    column-gap: 1.5rem;
 }
-
-
+.subtitle-number{
+    width: 5rem;
+    height: 5rem;
+    border:2px solid var(--dark-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.subtitle-number.has-sparkles::before{
+    width: 1rem;
+    height: 1rem;
+}
 
 
 

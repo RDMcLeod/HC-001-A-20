@@ -391,8 +391,17 @@ description-image.has-sparkles::before{
 .section-subtitle{
     font-size: (2rem, 5vw, 4rem);
 }
-
-
+.portfolio-cards{
+    gap: 2.5rem;
+}
+.card-image{
+    height:30rem;
+    background-color: #b3bbce;
+    margin-bottom: 2.5rem;
+    border-radius: .4rem;
+    display: flex;
+    align-items: center;
+}
 
 /* !CONTACT STYLES */
 

@@ -420,7 +420,10 @@ description-image.has-sparkles::before{
 .card-title{
     font-size: 2rem;
 }
-
+.card-subtitle{
+    font-size:1.4rem;
+    opacity: .8;
+}
 
 
 /* !CONTACT STYLES */

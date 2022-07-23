@@ -480,9 +480,23 @@ description-image.has-sparkles::before{
 }
 
 /* !CONTACT STYLES */
-
-
-
+.input{
+    position: relative;
+    margin-bottom: 5rem;
+}
+.input-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition:transform .25s;
+}
+.input input{
+    width: 100%;
+    border-bottom: 1px solid var(--dark-color);
+    padding: .5rem;
+}
 
 
 

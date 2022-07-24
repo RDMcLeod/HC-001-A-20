@@ -480,6 +480,10 @@ description-image.has-sparkles::before{
 }
 
 /* !CONTACT STYLES */
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
 .input{
     position: relative;
     margin-bottom: 5rem;
@@ -497,7 +501,15 @@ description-image.has-sparkles::before{
     border-bottom: 1px solid var(--dark-color);
     padding: .5rem;
 }
-
+input input:focus + .input-label{
+    transform: translateY(-2.5rem);
+}
+.form-button{
+    display:inline-block;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
 
 
 

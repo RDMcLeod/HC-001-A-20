@@ -510,7 +510,11 @@ input input:focus + .input-label{
     text-transform: uppercase;
     margin: 0 auto;
 }
-
+.required-field{
+    font-size:1rem ;
+    color: #ff7575;
+    transform: translateY(-.8rem);
+}
 
 
 /* !FOOTER STYLES */

@@ -516,8 +516,20 @@ input input:focus + .input-label{
     transform: translateY(-.8rem);
 }
 
-
 /* !FOOTER STYLES */
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border-top: 1px solid var(--border-top-color);
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+}
+
+
+
 
 /* !SCROLLBAR */
 

@@ -178,7 +178,9 @@ icon-button{
     color: var(--light-color);
 }
 .list-link:hover,
-.list-link:focus{
+.list-link:focus,
+.scroll-top:hover,
+.scroll-top:focus{
     opacity: .7;
 }
 .list-link span{
@@ -527,7 +529,14 @@ input input:focus + .input-label{
     padding-top: 5rem;
     padding-bottom: 1.5rem;
 }
-
+.footer .list-link{
+    color: var(--dark-color);
+}
+.scroll-top{
+    display: flex;
+    align-items: center;
+    color: var(--dark-color);
+}
 
 
 

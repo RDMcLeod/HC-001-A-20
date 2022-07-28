@@ -538,8 +538,21 @@ input input:focus + .input-label{
     color: var(--dark-color);
 }
 
-
-
 /* !SCROLLBAR */
+::-webkit-scrollbar{
+    width: 1rem;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--dark-color);
+}
+::-webkit-scrollbar-thumb{
+background-color: #b3bbce;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color:#808694 ;
+}
+
+
+
 
 /* !MEDIA QUERIES */

@@ -552,7 +552,25 @@ background-color: #b3bbce;
     background-color:#808694 ;
 }
 
-
-
-
 /* !MEDIA QUERIES */
+
+@media screen and (min-width: 768px){
+    .inline-image{
+        width:15rem;
+        height: 15rem;
+    }
+    .inline-image.has-sparkles::before{
+        width: 1.5rem;
+        height: 1.5rem;
+        top: -1rem;
+        right: -1rem;
+    }
+    .inline-image.has-sparkles::after{
+        width: 1rem;
+        height: 1rem;
+        top: 1.5rem;
+        right: -1.5rem;
+    }
+
+
+}

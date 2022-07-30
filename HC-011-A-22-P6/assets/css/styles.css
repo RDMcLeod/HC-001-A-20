@@ -571,6 +571,21 @@ background-color: #b3bbce;
         top: 1.5rem;
         right: -1.5rem;
     }
+.section-description{
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+}  
+
+.description{
+    font-size: 2.4rem;
+}
+.description-image{
+    width:30rem;
+    height: 30rem;
+}
+.portfolio-cards{
+    grid-template-columns: repeat(8, 1fr);
+}
 
 
 }

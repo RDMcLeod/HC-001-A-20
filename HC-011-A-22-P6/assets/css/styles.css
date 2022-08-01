@@ -74,7 +74,7 @@ textarea{
 
 /* !REUSABLE CLASSES */
 .container{
-    max-width: var(--container-width);
+    max-width: 54rem;
     margin: 0 auto;
     padding: 0 var(--container-padding);
 }
@@ -612,4 +612,15 @@ background-color: #b3bbce;
     grid-column:1/4;
     grid-row: 21/span 10;
 }
+.input-group{
+    display: flex;
+    column-gap: 5rem;
+}
+.input{
+    width: 100%;
+}
+.footer-container{
+    padding-block: 5rem;
+}
+
 }

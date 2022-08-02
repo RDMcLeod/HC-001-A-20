@@ -35,8 +35,9 @@ const toggleTheme = () => {
     localStorage.removeItem('darkTheme');
 }
 themeToggleButton.addEventListener('click', toggleTheme);
-
-
-
-
 // !SCROLL REVEAL
+const sr = ScrollReveal({
+    distance:'50px',
+    duration:1500,
+    easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+});

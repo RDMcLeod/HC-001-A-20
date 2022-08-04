@@ -46,3 +46,12 @@ sr.reveal('.main-title', {origin: 'top'});
 sr.reveal('.scroll-reveal-left', {origin: 'left'});
 sr.reveal('.scroll-reveal-right', {origin: 'right'});
 sr.reveal('.tech-stack-item', {interval: 250});
+sr.reveal(`.section-title, .section-subtitle-container`, {
+    origin:'top',
+    interval: 250
+});
+sr.reveal('.portfolio-card', {interval: 500});
+sr.reveal(`.form-container, .footer`, {
+    origin:'top',
+    interval: 250
+});

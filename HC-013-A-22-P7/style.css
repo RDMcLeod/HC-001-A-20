@@ -91,7 +91,10 @@ button {
   transition: padding .25s;
 
 }
-
+.header.active{
+  padding-top: 1rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+}
 
 
 

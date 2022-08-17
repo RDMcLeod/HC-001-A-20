@@ -121,7 +121,16 @@ button {
 .navbar_menu.active{
   transform: translate(0);
 }
-
+.navbar_list{
+  display: flex;
+  flex-direction: column;
+}
+.navbar_list-item{
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+.navbar_list-item:last-of-type{
+  border-bottom: none;
+}
 /*! === MAIN === */
 
 /*! === SHOWCASE === */

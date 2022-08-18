@@ -131,6 +131,18 @@ button {
 .navbar_list-item:last-of-type{
   border-bottom: none;
 }
+.navbar_list-link{
+  display:block;
+  color: var(--light-clr);
+  padding: 1rem;
+  transition: opacity .25s;
+}
+.navbar_list-link:is(:hover,:focus ){
+  opacity: .5;
+}
+
+
+
 /*! === MAIN === */
 
 /*! === SHOWCASE === */

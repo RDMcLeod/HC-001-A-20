@@ -79,6 +79,15 @@ button {
   padding-inline:1.8rem;
 }
 
+.btn{
+  display: inline-block;
+  cursor: pointer;
+  transition: opacity .25s;
+}
+.btn:is(hover,focus) {
+opacity: .8;
+}
+
 
 /*! === HEADER === */
 .header{
@@ -114,7 +123,7 @@ button {
   width: 25rem;
   height: 100vh;
   background-color: var(--dark-clr);
-  transform: translate(-26rem);
+  transform: translateX(-26rem);
   z-index: 999;
   transition: transform .5s ease-in;
 }
@@ -140,7 +149,10 @@ button {
 .navbar_list-link:is(:hover,:focus ){
   opacity: .5;
 }
-
+.navbar_btn-group{
+  display: flex;
+  column-gap: 1.5rem;
+}
 
 
 /*! === MAIN === */

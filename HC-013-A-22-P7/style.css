@@ -87,7 +87,22 @@ button {
 .btn:is(hover,focus) {
 opacity: .8;
 }
-
+.btn--action{
+  font-size: 1.8rem;
+  color: var(--light-clr);
+  line-height: 0;
+}
+.btn--text{
+  font-family: var(--title-font);
+  left: 1px;
+  font-size: 2rem;
+  padding: 1rem 3rem;
+}
+.btn--transparent{
+  color: var(--light-clr-2);
+  border-bottom: 2px solid var(--light-clr);
+  padding: 0;
+}
 
 /*! === HEADER === */
 .header{

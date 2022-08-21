@@ -171,6 +171,11 @@ opacity: .8;
 
 
 /*! === MAIN === */
+main{
+  overflow-x: hidden;
+}
+
+
 
 /*! === SHOWCASE === */
 

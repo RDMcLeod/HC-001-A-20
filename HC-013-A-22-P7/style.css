@@ -104,6 +104,25 @@ opacity: .8;
   padding: 0;
 }
 
+.title{
+  font-family: var(--title-font);
+  color: var(--light-clr-3);
+  letter-spacing: 1px;
+  font-size: 3.6rem;
+}
+.title--main{
+  font-size: clamp(4.2rem, 8vw, 10rem);
+  line-height: 1.2;
+  background: url(../images/Showcase_image_lg.png) center 37% no repeat;
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+
 /*! === HEADER === */
 .header{
   position: fixed;

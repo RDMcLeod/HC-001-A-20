@@ -121,6 +121,15 @@ opacity: .8;
   position: relative;
   z-index: 10;
 }
+.section_metadata{
+  padding-bottom: 6rem;
+  text-align: center;
+}
+.section_metadata_description{
+  margin-top: 1.3rem;
+}
+
+
 
 
 /*! === HEADER === */
@@ -205,6 +214,17 @@ main{
 }
 
 /*! === PORTFOLIO === */
+.portfolio{
+  padding-top: 7.4rem;
+  padding-bottom: 12rem;
+}
+.portfolio_metadata{
+  padding-bottom: 4rem;
+  text-align: left;
+
+}
+
+
 
 /* --- SWIPER --- */
 

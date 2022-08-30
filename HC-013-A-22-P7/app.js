@@ -19,5 +19,17 @@ const linksToggleMenu = (e) => {
 }
 window.addEventListener('click', linksToggleMenu);
 //! === SWIPER ===
-
+const swiper = new swiper('.myswiper',{
+    effect:'coverflow', 
+    grabCursor: true,
+    centerSlides: true,
+    slidePerView: 'auto',
+    coverflowEffect:{
+        rotate: 50,
+        stretch:0,
+        depth:100,
+        modifier:1,
+        slideShadows: true
+    }
+})
 //! === SCROLL REVEAL ===

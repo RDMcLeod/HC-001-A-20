@@ -242,6 +242,23 @@ main{
 
 
 /*! === SERVICES === */
+.services{
+  background-color:var(--dark-clr);
+  padding-block: 7.4rem;
+}
+
+.services_container{
+  display: grid
+  ;
+}
+
+.services_image-wrapper{
+margin-bottom: 6rem;
+}
+.services_image-wrapper img{
+  margin-inline: auto ;
+}
+
 
 /*! === ABOUT === */
 

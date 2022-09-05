@@ -258,8 +258,20 @@ margin-bottom: 6rem;
 .services_image-wrapper img{
   margin-inline: auto ;
 }
-
-
+.services_list,
+.services_list-divider{
+  display: grid;
+  gap: 5rem;
+}
+.services_list-icon{
+  display: inline-block;
+  font-size: 3.6rem;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+.services_list-title{
+  margin-bottom: 1rem;
+}
 /*! === ABOUT === */
 
 /*! === BLOG === */

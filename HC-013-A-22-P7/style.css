@@ -128,7 +128,10 @@ opacity: .8;
 .section_metadata_description{
   margin-top: 1.3rem;
 }
-
+.btn-green{
+  background-color: var(--light-clr-2);
+  color: var(--dark-clr);
+}
 
 
 
@@ -288,7 +291,22 @@ margin-bottom: 6rem;
   margin-bottom: 1.5rem;
 }
 .about_information-description:last-of-type{
-  margin-bottom: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.about_images{
+  display: grid;
+  grid-template-colums:repeat(10, 1fr) ;
+  margin-inline: auto;
+}
+.about_images-image--top{
+  grid-column: 4/-1;
+  grid-row: 1/span 4;
+}
+
+.about_images-image--bottom{
+
+  
 }
 
 /*! === BLOG === */

@@ -294,7 +294,7 @@ margin-bottom: 6rem;
 
 .about_images{
   display: grid;
-  grid-template-colums:repeat(10, 1fr) ;
+  grid-template-columns:repeat(10, 1fr) ;
   margin-inline: auto;
 }
 .about_images-image--top{
@@ -303,7 +303,9 @@ margin-bottom: 6rem;
 }
 
 .about_images-image--bottom{
-
+  grid-column: 1/7;
+  grid-row: 3/span 5;
+  z-index: 5;
   
 }
 

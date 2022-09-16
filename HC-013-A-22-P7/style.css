@@ -309,6 +309,22 @@ margin-bottom: 6rem;
 }
 
 /*! === BLOG === */
+.blog{
+  padding-top: 4rem;
+  padding-bottom: 12rem;
+}
+.blog_container{
+  display: grid;
+}
+.blog_metadata-description{
+  margin-bottom: 4rem;
+}
+.blog_post:first-of-type{
+  margin-bottom: 6rem;
+}
+.blog_post-image{
+  margin-bottom: 3rem;
+}
 
 /*! === FOOTER === */
 

@@ -325,6 +325,13 @@ margin-bottom: 6rem;
 .blog_post-image{
   margin-bottom: 3rem;
 }
+.blog_post-image img{
+  margin-inline: auto;
+}
+.blog_post-title{
+  font-size: 2.6;
+  margin-bottom: 2rem;
+}
 
 /*! === FOOTER === */
 

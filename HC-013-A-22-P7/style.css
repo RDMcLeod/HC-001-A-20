@@ -335,6 +335,26 @@ margin-bottom: 6rem;
 
 /*! === FOOTER === */
 
+.footer{
+  background-color: var(--dark-clr);
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+}
+.footer_group{
+  text-align: center;
+}
+.footer_title{
+  margin-bottom: 3rem;
+}
+.footer_separator{
+  display: block;
+  height: 1px;
+  background-color:var(--light-clr);
+  margin-top: 10rem;
+}
+
+
+
 /*! === MEDIA QUERIES === */
 /* --- Phones --- */
 @media (min-width: 31.25em) {}

@@ -94,7 +94,7 @@ opacity: .8;
 }
 .btn--text{
   font-family: var(--title-font);
-  left: 1px;
+  letter-spacing: 1px;
   font-size: 2rem;
   padding: 1rem 3rem;
 }
@@ -380,13 +380,37 @@ margin-bottom: 6rem;
   background-color: var(--light-clr-2);
   color: var(--dark-clr);
 }
+.footer_copyright{
+  display: inline-block;
+  margin-top: 5rem;
+}
 
 /*! === MEDIA QUERIES === */
 /* --- Phones --- */
-@media (min-width: 31.25em) {}
+@media (min-width: 31.25em) {
+  .container{
+    max-width: 50rem;
+  }
+}
 
 /* --- Tablets --- */
-@media (min-width: 48em) {}
+@media (min-width: 48em) {
+  body{
+    font-size: 1.6rem;
+  }
+  .container{
+    max-width: 76.8rem;
+  }
+  #menu-toggler{
+    display: none;
+  }
+  .navbar_menu{
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+  }
+}
 
 /* --- Laptops/Desktops --- */
 @media (min-width: 64em) {}

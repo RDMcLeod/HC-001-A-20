@@ -409,6 +409,21 @@ margin-bottom: 6rem;
     width: initial;
     height: initial;
     background-color: transparent;
+    transform: initial;
+    transition: none;
+  }
+  .navbar_list{
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .navbar_list-item{
+    border-bottom: none;
+  }
+  .showcase_image{
+    transform: translateY(-5rem);
+  }
+  .section-metadata{
+    grid-column: 1/-1;
   }
 }
 

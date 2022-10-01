@@ -430,9 +430,19 @@ margin-bottom: 6rem;
     margin-inline: auto;
   }
   .services_container{
-    grid-template-columns:repeat(2, 1fr) ;
+    grid-template-columns:repeat(2, 1fr);
     align-items: center;
+    column-gap: 2.5rem;
   }
+  .services_image-wrapper{
+    margin-left: 0;
+  }
+  .services_image-wrapper img{
+    margin-inline: 0;
+  }
+   .services_list{
+    grid-template-columns: repeat(2, 1fr) ;
+   }
 }
 
 /* --- Laptops/Desktops --- */

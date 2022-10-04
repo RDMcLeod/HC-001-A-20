@@ -450,6 +450,13 @@ margin-bottom: 6rem;
     column-gap:2.5rem;
     
   }
+  .blog_post:first-of-type{
+    margin-bottom: 0;
+  }
+  .footer_description{
+    max-width: 50rem;
+    margin-inline: auto;
+  }
 }
 
 /* --- Laptops/Desktops --- */

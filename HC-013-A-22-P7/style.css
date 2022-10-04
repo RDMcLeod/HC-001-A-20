@@ -460,4 +460,19 @@ margin-bottom: 6rem;
 }
 
 /* --- Laptops/Desktops --- */
-@media (min-width: 64em) {}
+@media (min-width: 64em) {
+  .container{
+    max-width:120rem;
+
+  }
+  .title--main{
+    background-position: center 48% ;
+
+  }
+  .showcase_image{
+    transform: translateY(-8rem);
+  }
+  .services_container{
+    grid-template-columns:1fr 1.5fr ;
+  }
+}

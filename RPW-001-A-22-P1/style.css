@@ -94,7 +94,7 @@ opacity: .8;
 }
 .btn--text{
   font-family: var(--title-font);
-  left: 1px;
+  letter-spacing: 1px;
   font-size: 2rem;
   padding: 1rem 3rem;
 }
@@ -351,16 +351,128 @@ margin-bottom: 6rem;
   height: 1px;
   background-color:var(--light-clr);
   margin-top: 10rem;
+  margin-bottom: 8rem;
 }
-
-
+.footer_logo{
+ display: inline-block;
+}
+.footer_description{
+  margin-bottom: 3rem;
+}
+.footer_list{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.footer_list-link{
+  color: var(--light-clr);
+  font-size: 1.8rem;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .25s;
+}
+.footer_list-link:hover{
+  background-color: var(--light-clr-2);
+  color: var(--dark-clr);
+}
+.footer_copyright{
+  display: inline-block;
+  margin-top: 5rem;
+}
 
 /*! === MEDIA QUERIES === */
 /* --- Phones --- */
-@media (min-width: 31.25em) {}
+@media (min-width: 31.25em) {
+  .container{
+    max-width: 50rem;
+  }
+}
 
 /* --- Tablets --- */
-@media (min-width: 48em) {}
+@media (min-width: 48em) {
+  body{
+    font-size: 1.6rem;
+  }
+  .container{
+    max-width: 76.8rem;
+  }
+  #menu-toggler{
+    display: none;
+  }
+  .navbar_menu{
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    transform: initial;
+    transition: none;
+  }
+  .navbar_list{
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .navbar_list-item{
+    border-bottom: none;
+  }
+  .showcase_image{
+    transform: translateY(-5rem);
+  }
+  .section-metadata{
+    grid-column: 1/-1;
+  }
+  .section-metadata_description{
+    max-width: 70rem;
+    margin-inline: auto;
+  }
+
+  .services_image-wrapper{
+    margin-left: 0;
+  }
+  .services_image-wrapper img{
+    margin-inline: 0;
+  }
+  .services_list{
+    grid-template-columns: repeat(2, 1fr) ;
+   }
+  .services_list-item{
+    align-self: center;
+  }
+  .services_container,
+  .about_container,
+  .blog_container{
+    grid-template-columns:repeat(2, 1fr);
+    align-items:center;
+    column-gap:2.5rem;
+    
+  }
+  .blog_post:first-of-type{
+    margin-bottom: 0;
+  }
+  .footer_description{
+    max-width: 50rem;
+    margin-inline: auto;
+  }
+}
 
 /* --- Laptops/Desktops --- */
-@media (min-width: 64em) {}
+@media (min-width: 64em) {
+  .container{
+    max-width:120rem;
+
+  }
+  .title--main{
+    background-position: center 48% ;
+
+  }
+  .showcase_image{
+    transform: translateY(-8rem);
+  }
+  .services_container{
+    grid-template-columns:1fr 1.5fr ;
+  }
+}

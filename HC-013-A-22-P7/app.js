@@ -47,6 +47,14 @@ sr.reveal('.showcase_title, .showcase_image, .section_metadata, .swiper',{
     interval:250
 });
 sr.reveal('.services_image-wrapper, .about_information,.post--left', {
+    origin: 'left',
+    
+});
+sr.reveal('.services_list, .about_images,.post--right', {
+    origin: 'right',
+    
+});
+sr.reveal('.footer_container', {
     origin: 'top',
-    interval:250
+    
 });

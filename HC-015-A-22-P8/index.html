@@ -12,8 +12,12 @@
         <section id="searchBar" class="searchBar">
             <form id="searchBar_form" class="searcBar_form" role="search">
                <label for='searchBar_text'>Enter a new location</label>
-               <input id="searchBar_text" class="searchBar_text" type="text" role="searchbox"> 
-            </form>
+               <input id="searchBar_text" class="searchBar_text" type="text" role="searchbox" size="40" autocomplete="off" placeholder="City, state, Country">
+               <button id="searchBar_button" class="searchBar_button" title="Submit Location" aria-label="Enter Zip Code or City, Stae, Country to retrieve weather conditions">
+
+               </button>
+
+                </form>
         </section>
         <section id="currentForecast" class="currentForecast"></section>
         <nav id="navButtons" class="navButtons"></nav>

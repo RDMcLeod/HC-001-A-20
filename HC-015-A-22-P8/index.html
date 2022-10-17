@@ -18,12 +18,16 @@
                <label for='searchBar_text'>Enter a new location</label>
                <input id="searchBar_text" class="searchBar_text" type="text" role="searchbox" size="40" autocomplete="off" placeholder="City, state, Country">
                <button id="searchBar_button" class="searchBar_button" title="Submit Location" aria-label="Enter Zip Code or City, Stae, Country to retrieve weather conditions">
-                    Submit
+                    <i class="fa fa-search"></i>
+                    <i class="fas fa-sync fa-spin"></i>
                </button>
 
             </form>
         </section>
-        <section id="currentForecast" class="currentForecast"></section>
+        <a href="#currentForecats" class="skip-link">Skip to Current Conditions</a>
+        <section id="currentForecast" class="currentForecast" role="region" aria-labelledby="weatherLocation">
+
+        </section>
         <nav id="navButtons" class="navButtons"></nav>
         <section id="dailyForecast" class="dailyForcast"></section>
     </main>

@@ -1,0 +1,11 @@
+.searchBar{
+    padding: 0.5rem 0.5rem 1.5rem;
+
+    .search__form{
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid $bordercolor;
+        border-radius: 500px;
+    }
+
+}

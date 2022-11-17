@@ -62,3 +62,18 @@
         }
       }
     }
+    .maxtemp{
+      @include flexCenter;
+      grid-row: 2 / span 1;
+      grid-column: 3/span 2;
+      color: $fadecolor;
+    }
+    .mintemp{
+      @include flexCenter;
+      align-self: start;
+      grid-row: 3/span 1;
+      grid-column: 3/span 2;
+      color: $fadecolor;
+    }
+  }
+}

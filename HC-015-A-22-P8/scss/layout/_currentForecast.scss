@@ -81,10 +81,17 @@
       padding-top: 0.5rem;
       @include mqMaxWMinH(1024px, 650px) {
         margin-top: 1.5rem;
-     }
+      }
       @include mqh(1080px) {
         margin-top: 1.5rem;
+      }
     }
-  }
+    .feels {
+      @include flexCenter;
+      grid-row: 5 / span 1;
+      grid-column: 1 / span 4;
+      padding-top: 0.5rem;
+      font-weight: normal;
+    }
   }
 }

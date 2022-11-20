@@ -93,5 +93,19 @@
       padding-top: 0.5rem;
       font-weight: normal;
     }
+    .humidity {
+      display: none;
+      grid-row: 6 / span 1;
+      grid-column: 1 / span 4;
+      padding-top: 0.5rem;
+      font-weight: normal;
+      color: $fadecolor;
+      @include mqMaxWMinH(1024px, 700px) {
+        @include flexCenter;
+      }
+      @include mqh(1080px) {
+        @include flexCenter;
+      }
+    }
   }
 }

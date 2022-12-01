@@ -23,4 +23,17 @@ export default class CurrentLocation{
     setLon(lon) {
         this._lon = lon;
     }
+    
+
+    getUnit() {
+        return this._unit;
+  }
+
+    setUnit(unit) {
+        this._unit = unit;
+  }
+
+    toggleUnit() {
+        this._unit = this._unit === "imperial" ? "metric" : "imperial";
+  }
 }

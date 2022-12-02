@@ -1,3 +1,6 @@
+import CurrentLocation from "./CurrentLocation.js";
+const currentLoc = new CurrentLocation();
+
 const initApp = () =>{
     //add listeners
     const geoButton = document.getElementById("getLocation");
@@ -20,3 +23,14 @@ const initApp = () =>{
     // load weather
 }
 document.addEventListener(DOMcontentLoaded, initApp);
+
+const getGeoWeather = (event) => {
+    if (event) {
+        if (event.type === "click") {
+          const mapIcon = document.querySelector(".fa-map-marker-alt");
+          addSpinner(mapIcon);
+        }
+    }
+    if (!navigator.geolocation) geoErrpr();
+    navigator.geolocation.getCurrentPosition(geoSucess, geoError);
+}

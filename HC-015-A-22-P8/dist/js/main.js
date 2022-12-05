@@ -1,4 +1,4 @@
-import {addSpinner} from "./domFunctions.js";
+import {addSpinner, displayError} from "./domFunctions.js";
 import CurrentLocation from "./CurrentLocation.js";
 const currentLoc = new CurrentLocation();
 
@@ -38,4 +38,11 @@ const getGeoWeather = (event) => {
 const geoError = (errObj) => {
     const errMsg = errObj.message ? errObj.message : "GeoLocation not supported";
     displayError(errMsg, errMsg);
+};
+const geoSuccess = (position) => {
+    const mycoordsObj = {
+        lat: position.coords.latitude,
+        lon: position.coords.longitude,
+        name:`Lat:${position.coords.latitude} Long:${position.coords.longitude}`
+    }
 }

@@ -1,7 +1,7 @@
 export const addSpinner = (element) =>{
     animateButton(element);
     setTimeout(animateButton, 1000, element);
-}
+};
 const animateButton = (element)=> {
     element.classList.toggle("none");
     element.nextElementSibling.classList.toggle("block");
@@ -15,4 +15,7 @@ export const displayError = (headerMsg, srMsg) =>{
 const updateWeatherLocationHeader  = (message) => {
     const h1 = document.getElementById("currentForecast__location");
     h1.textContent = message;
+};
+const updateScreenReaderConfirmation = (message) => {
+    document.getElementById("confirmation").textContent = message;
 }

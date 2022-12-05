@@ -32,9 +32,10 @@ const getGeoWeather = (event) => {
           addSpinner(mapIcon);
         }
     }
-    if (!navigator.geolocation) geoErrpr();
+    if (!navigator.geolocation) geoError();
     navigator.geolocation.getCurrentPosition(geoSucess, geoError);
 };
 const geoError = (errObj) => {
     const errMsg = errObj.message ? errObj.message : "GeoLocation not supported";
+    displayError(errMsg, errMsg);
 }

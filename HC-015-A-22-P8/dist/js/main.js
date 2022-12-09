@@ -21,9 +21,9 @@ const initApp = () =>{
 
     // set up
 
-
-    // load weather
-}
+    //load weather
+    loadweather();
+};
 document.addEventListener(DOMcontentLoaded, initApp);
 
 const getGeoWeather = (event) => {
@@ -48,4 +48,13 @@ const geoSuccess = (position) => {
     };
     setLocationObject(currentLoc, myCoordObj);
     updateDataAndDisplay(currentLoc);
+};
+const loadweather = (event) => {
+    const savedLoaction = getHomeLocation();
+}
+
+
+const updateDataAndDisplay = async (location) => {
+    //const weatherjson = await getGeoWeatherFromCoords(locationObj);
+    //if(weatherJson) updateDataAndDisplay(weatherJson, locationObj);
 }

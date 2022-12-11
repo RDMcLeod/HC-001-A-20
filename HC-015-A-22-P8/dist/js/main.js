@@ -50,8 +50,14 @@ const geoSuccess = (position) => {
     updateDataAndDisplay(currentLoc);
 };
 const loadweather = (event) => {
-    const savedLoaction = getHomeLocation();
+    const savedLocation = getHomeLocation();
     if (!savedLocation && !event) return getGeoWeather();
+    if (!savedLocation && event.type === "click") {
+        displayError(
+            "No Home Location Saved.",
+            "Sorry. Please save Your home location first"
+        )
+    };
 };
 
 

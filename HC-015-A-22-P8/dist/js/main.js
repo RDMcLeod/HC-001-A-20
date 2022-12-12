@@ -56,7 +56,13 @@ const loadweather = (event) => {
         displayError(
             "No Home Location Saved.",
             "Sorry. Please save Your home location first"
-        )
+        );
+    } else if (savedLocation && !event){
+        displayHomeLocationWeather(savedLocation);
+    } else {
+        const homeIcon = document.querySelector(".fa-home");
+        addSpinner(homeIcon);
+        displayHomeLocationWeather(savedLocation);
     };
 };
 

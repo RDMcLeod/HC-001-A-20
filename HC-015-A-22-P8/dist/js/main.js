@@ -74,6 +74,8 @@ const displayHomeLocationWeather = (home) => {
             name: locationJson.name,
             unit: locationJson.unit
         };
+        setLocationObject(currentLoc, myCoordsObj);
+        updateDataAndDisplay(currentLoc);
     };
 };
 

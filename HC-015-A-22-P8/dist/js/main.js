@@ -76,11 +76,26 @@ const displayHomeLocationWeather = (home) => {
         };
         setLocationObject(currentLoc, myCoordsObj);
         updateDataAndDisplay(currentLoc);
+
+        
     };
 };
+const savedLocation = ()=> {
+    if (currentLoc.getLat() && currentLoc.getLon()) {
+        const saveIcon = document.querySelector(".fa-save");
+        addSpinner (saveIcon);
+        const location = {
+            name: currentLoc.getName(),
+            lat: currentLoc.getLat(),
+            lon: currentLoc.getLon(),
+            unit: currentLoc.getUnit()
 
+        }
+    }
+}
 
 const updateDataAndDisplay = async (location) => {
+
     //const weatherjson = await getGeoWeatherFromCoords(locationObj);
     //if(weatherJson) updateDataAndDisplay(weatherJson, locationObj);
 };

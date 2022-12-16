@@ -90,7 +90,9 @@ const savedLocation = ()=> {
             lon: currentLoc.getLon(),
             unit: currentLoc.getUnit()
 
-        }
+        };
+        localStorage.setItem ("defaultWeatherLocation", JSON,stringfy(location));
+        updateScreenReaderConfirmation(`Saved ${currentLoc,getName()} as home location.`)
     }
 }
 

@@ -99,10 +99,15 @@ const setUnitPref = ()=>{
     const unitIcon = document.querySelector(".fa-chart-bar");
     addSpinner(unitIcon);
     currentLoc.toggleUnit();
-}
-
+    updateDataAndDisplay(currentLoc);
+};
+const  refreshWeather = ()=> {
+    const refreshIcon = document.querySelector(".fa-sync-alt");
+    addSpinner(refreshIcon);
+};
 
 const updateDataAndDisplay = async (location) => {
+    console.log(locationObj);
 
     //const weatherjson = await getGeoWeatherFromCoords(locationObj);
     //if(weatherJson) updateDataAndDisplay(weatherJson, locationObj);

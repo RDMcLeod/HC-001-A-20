@@ -1,5 +1,5 @@
 import {setLocationObject, getHomeLocation} from "./dataFunctions.js";
-import {addSpinner, displayError} from "./domFunctions.js";
+import {addSpinner, displayError, updateScreenReaderConfirmation} from "./domFunctions.js";
 import CurrentLocation from "./CurrentLocation.js";
 const currentLoc = new CurrentLocation();
 
@@ -93,8 +93,14 @@ const savedLocation = ()=> {
         };
         localStorage.setItem ("defaultWeatherLocation", JSON,stringfy(location));
         updateScreenReaderConfirmation(`Saved ${currentLoc,getName()} as home location.`)
-    }
+    };
+};
+const setUnitPref = ()=>{
+    const unitIcon = document.querySelector(".fa-chart-bar");
+    addSpinner(unitIcon);
+    currentLoc.toggleUnit();
 }
+
 
 const updateDataAndDisplay = async (location) => {
 

@@ -16,6 +16,6 @@ const updateWeatherLocationHeader  = (message) => {
     const h1 = document.getElementById("currentForecast__location");
     h1.textContent = message;
 };
-const updateScreenReaderConfirmation = (message) => {
+export const updateScreenReaderConfirmation = (message) => {
     document.getElementById("confirmation").textContent = message;
 }

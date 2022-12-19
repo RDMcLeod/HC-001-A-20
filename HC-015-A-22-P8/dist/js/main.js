@@ -76,9 +76,9 @@ const displayHomeLocationWeather = (home) => {
         };
         setLocationObject(currentLoc, myCoordsObj);
         updateDataAndDisplay(currentLoc);
-
-        
+       
     };
+    
 };
 const savedLocation = ()=> {
     if (currentLoc.getLat() && currentLoc.getLon()) {
@@ -104,7 +104,13 @@ const setUnitPref = ()=>{
 const  refreshWeather = ()=> {
     const refreshIcon = document.querySelector(".fa-sync-alt");
     addSpinner(refreshIcon);
+    updateDataAndDisplay(currentLoc);
 };
+const submitNewLocation = async (event) => {
+    event.preventDefaullt();
+    const text = document.getElementById("searchBar__text").value;
+    const entryText = cleanText(text);
+}
 
 const updateDataAndDisplay = async (location) => {
     console.log(locationObj);

@@ -110,6 +110,7 @@ const submitNewLocation = async (event) => {
     event.preventDefaullt();
     const text = document.getElementById("searchBar__text").value;
     const entryText = cleanText(text);
+    if (!entryText.length) return;
 }
 
 const updateDataAndDisplay = async (location) => {

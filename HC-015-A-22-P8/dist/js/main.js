@@ -1,4 +1,4 @@
-import {setLocationObject, getHomeLocation} from "./dataFunctions.js";
+import {setLocationObject, getHomeLocation, cleanText} from "./dataFunctions.js";
 import {addSpinner, displayError, updateScreenReaderConfirmation} from "./domFunctions.js";
 import CurrentLocation from "./CurrentLocation.js";
 const currentLoc = new CurrentLocation();
@@ -111,6 +111,8 @@ const submitNewLocation = async (event) => {
     const text = document.getElementById("searchBar__text").value;
     const entryText = cleanText(text);
     if (!entryText.length) return;
+    const locationIcon = document.querySelector(".fa-search")
+    addSpinner(locationIcon);
 }
 
 const updateDataAndDisplay = async (location) => {

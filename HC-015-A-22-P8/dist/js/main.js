@@ -114,9 +114,13 @@ const submitNewLocation = async (event) => {
     const locationIcon = document.querySelector(".fa-search")
     addSpinner(locationIcon);
     const coordsdata = await getCoordsFromApi(entryText, currentLoc.getUnit());
-    // work with api data
+    
     if(coordsData.cod === 200){
+        // work with api data
         // sucess
+        const myCoordsObj = {};
+        setLocationObject(currentLoc, myCoordsObj);
+        updateDataAndDisplay(currentLoc);
     }else {
         displayApiError(coordsdata);
     }

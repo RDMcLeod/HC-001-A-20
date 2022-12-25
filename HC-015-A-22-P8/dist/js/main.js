@@ -1,5 +1,5 @@
 import {setLocationObject, getHomeLocation, cleanText} from "./dataFunctions.js";
-import {addSpinner, displayError, updateScreenReaderConfirmation} from "./domFunctions.js";
+import {addSpinner, displayError, displayApiError, updateScreenReaderConfirmation} from "./domFunctions.js";
 import CurrentLocation from "./CurrentLocation.js";
 const currentLoc = new CurrentLocation();
 
@@ -17,10 +17,9 @@ const initApp = () =>{
     refreshButton.addEventListener("click", refreshWeather);
     const locationEntry = document.getElementById("searchBar__form");
     locationEntry.addEventListener("submit", submitNewLocation);
-    
-
+   
     // set up
-
+    setPlaceholderText();
     //load weather
     loadweather();
 };

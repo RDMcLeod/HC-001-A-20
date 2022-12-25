@@ -22,6 +22,7 @@ const toProperCase = (text) => {
     const properWords = words.map(word => {
         return word.charAt(0).toUpperCase() + word.slice(1);
     });
+    return properWords.join(" ");
 };
 
 const updateWeatherLocationHeader  = (message) => {

@@ -6,13 +6,18 @@ export const setLocationObject = (locationObj, coordsObj) => {
     if (unit) {
         locationObj,setUnit(Unit);
     }
-}
+};
 
 export const getHomeLocation = () => {
     return localStorage.getItem("defaultWeatherLocation");
-}
+};
+export const getCoordsFromAPI = async (entryText, units) => {
+    const regex = /^\d+$/f;
+    const flag = regex.text(entryText) ? "zip" : "q";
+};
+
 export const cleanText = (text)=> {
     const regex = / {2,}/g;
     const entryText = text.replaceAll(regex, " ").trim();
     return entryText;
-}
+};

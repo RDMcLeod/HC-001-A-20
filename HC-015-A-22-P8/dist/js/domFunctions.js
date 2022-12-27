@@ -1,7 +1,8 @@
 export const setPlaceholdertext = () => {
     const input = document.getElementById("searchBar__text");
     window.innerWidth < 400 ? (input.placeholder = "city, state, country") : (input.placeholder = "city, state, country, or zip Code");
-}
+};
+
 
 export const addSpinner = (element) =>{
     animateButton(element);

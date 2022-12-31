@@ -1,4 +1,4 @@
-import {setLocationObject, getHomeLocation, cleanText} from "./dataFunctions.js";
+import {setLocationObject, getHomeLocation, getCoordsFromApi, cleanText} from "./dataFunctions.js";
 import {addSpinner, displayError, displayApiError, updateScreenReaderConfirmation} from "./domFunctions.js";
 import CurrentLocation from "./CurrentLocation.js";
 const currentLoc = new CurrentLocation();
@@ -113,16 +113,19 @@ const submitNewLocation = async (event) => {
     const locationIcon = document.querySelector(".fa-search")
     addSpinner(locationIcon);
     const coordsdata = await getCoordsFromApi(entryText, currentLoc.getUnit());
-    
-    if(coordsData.cod === 200){
-        // work with api data
-        // sucess
+    if (coordsData) {
+        if (coordsData.cod === 200){
+            // work with api data
+            // sucess
         const myCoordsObj = {};
         setLocationObject(currentLoc, myCoordsObj);
         updateDataAndDisplay(currentLoc);
-    }else {
+    } else {
         displayApiError(coordsdata);
     }
+ } else {
+    displayError ("Connection Error",  "Connection Error");
+ }
 }
 
 const updateDataAndDisplay = async (location) => {

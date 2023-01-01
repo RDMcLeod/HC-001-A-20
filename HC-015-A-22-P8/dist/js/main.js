@@ -112,12 +112,14 @@ const submitNewLocation = async (event) => {
     if (!entryText.length) return;
     const locationIcon = document.querySelector(".fa-search")
     addSpinner(locationIcon);
-    const coordsdata = await getCoordsFromApi(entryText, currentLoc.getUnit());
+    const coordsData = await getCoordsFromApi(entryText, currentLoc.getUnit());
     if (coordsData) {
         if (coordsData.cod === 200){
-            // work with api data
-            // sucess
-        const myCoordsObj = {};
+           const myCoordsObj = {
+               lat: coordsdata.coord.lat,
+               lon: coordsdata.coord.lon,
+               name: coordsData.sys.country ? `${coordsData.name}, ${coordsData.sys.country}`: coordsdata.name
+           };
         setLocationObject(currentLoc, myCoordsObj);
         updateDataAndDisplay(currentLoc);
     } else {

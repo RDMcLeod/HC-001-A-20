@@ -12,6 +12,16 @@ export const setLocationObject = (locationObj, coordsObj) => {
 export const getHomeLocation = () => {
     return localStorage.getItem("defaultWeatherLocation");
 };
+
+export const getGeoWeatherFromCoords = async (locationObj) => {
+    const lat = locationObj.getLat();
+    const lon = locationObj.getLon();
+    const units = locationObj.getUnit();
+}
+
+
+
+
 export const getCoordsFromApi = async (entryText, units) => {
     const regex = /^\d+$/f;
     const flag = regex.text(entryText) ? "zip" : "q";

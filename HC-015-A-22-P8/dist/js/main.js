@@ -1,4 +1,4 @@
-import {setLocationObject, getHomeLocation, getCoordsFromApi, cleanText} from "./dataFunctions.js";
+import {setLocationObject, getHomeLocation, getGeoWeatherFromCoords, getCoordsFromApi, cleanText} from "./dataFunctions.js";
 import {addSpinner, displayError, displayApiError, updateScreenReaderConfirmation} from "./domFunctions.js";
 import CurrentLocation from "./CurrentLocation.js";
 const currentLoc = new CurrentLocation();
@@ -131,7 +131,7 @@ const submitNewLocation = async (event) => {
 }
 
 const updateDataAndDisplay = async (location) => {
-    console.log(locationObj);
     const weatherjson = await getGeoWeatherFromCoords(locationObj);
+    consdole.log(weatherJson);
     if(weatherJson) updateDisplay(weatherJson, locationObj);
 };

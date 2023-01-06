@@ -133,5 +133,5 @@ const submitNewLocation = async (event) => {
 const updateDataAndDisplay = async (location) => {
     const weatherjson = await getGeoWeatherFromCoords(locationObj);
     consdole.log(weatherJson);
-    if(weatherJson) updateDisplay(weatherJson, locationObj);
+    //if(weatherJson) updateDisplay(weatherJson, locationObj);
 };

@@ -40,9 +40,18 @@ export const updateScreenReaderConfirmation = (message) => {
 }
  export const updateDisplay = (weatherJson, locationObj) => {
     fadeDisplay();
+    clearDisplay();
+
+    fadeDisplay();
 }
 const fadeDisplay = () => {
     const cc = document.getElementById("currentForecast");
     cc.classList.toggle("zero-vis");
     cc.classList.toggle("fade-in");
+    const sixDay = document.getElementById("dailyForecast");
+    cc.classList.toggle("zero-vis");
+    cc.classList.toggle("fade-in");
+}
+const clearDisplay = () => {
+    const currentConditions = document.getElementById("currentForecast__conditions")
 }

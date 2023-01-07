@@ -53,5 +53,8 @@ const fadeDisplay = () => {
     cc.classList.toggle("fade-in");
 }
 const clearDisplay = () => {
-    const currentConditions = document.getElementById("currentForecast__conditions")
+    const currentConditions = document.getElementById("currentForecast__conditions");
+    deleteContents(currentConditions);
+    const sixDayForecast = document.getElementById("dailyForecast__contents");
+    deleteContents(sixDayForecast);
 }

@@ -95,4 +95,10 @@ const setBGImage = (weatherClass) => {
     document.documentElement.classList.forEach(img => {
         if (img !== weatherClass)document.documentElement.classList.remove(img);
     }); 
+};
+const buildScreenReaderWeather = (weatherJson, locationObj) => {
+    const location = locationObj.getName();
+    const unit = locationObj.getUnit();
+    const tempUnit = unit === "imperial" ? "F" : "C";
+    return `${weatherJson.current.weather[0].description} and ${math.round(Number(weatherJoson.current.temp))}°${tempUnit} in ${location}`;
 }

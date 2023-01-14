@@ -44,8 +44,11 @@ export const updateScreenReaderConfirmation = (message) => {
     const weatherClass = getWeatherClass(weatherJson.current.weather[0].icon);
     setBGImage(weatherClass);
     const screenReaderWeather = buildScreenReaderWeather(weatherJson, locationObj);
-
-
+    updateScreenReaderConfirmation(ScreenReaderWeather);
+    updateWeatherLocationHeader(locationObj,getName());
+    //current conditions
+    //six day forecast
+    setFocusOnSearch();
     fadeDisplay();
 };
 

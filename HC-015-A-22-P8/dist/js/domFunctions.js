@@ -47,6 +47,7 @@ export const updateScreenReaderConfirmation = (message) => {
     updateScreenReaderConfirmation(ScreenReaderWeather);
     updateWeatherLocationHeader(locationObj,getName());
     //current conditions
+    const ccArray = createCurrentConditionsDivs(weatherJson, locationObj.getUnit());
     //six day forecast
     setFocusOnSearch();
     fadeDisplay();
@@ -104,4 +105,7 @@ const buildScreenReaderWeather = (weatherJson, locationObj) => {
     const unit = locationObj.getUnit();
     const tempUnit = unit === "imperial" ? "F" : "C";
     return `${weatherJson.current.weather[0].description} and ${math.round(Number(weatherJoson.current.temp))}°${tempUnit} in ${location}`;
+}
+const setFocusOnSearch = ()=> {
+    document.getElementById("searchBar__text").focus();
 }

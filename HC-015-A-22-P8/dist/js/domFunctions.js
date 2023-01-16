@@ -109,3 +109,9 @@ const buildScreenReaderWeather = (weatherJson, locationObj) => {
 const setFocusOnSearch = ()=> {
     document.getElementById("searchBar__text").focus();
 }
+const createCurrentConditionsDivs = (weatherObj, unit) => {
+    const tempUnit = unit === "imperial" ? "F" : "C";
+    const windUnit = unit === "imperial" ? "mpg" : "m/s";
+    const icon = createMainImgDiv(weatherObj.current.weather[0].icon, weatherObj.current.weather[0].description);
+   
+}

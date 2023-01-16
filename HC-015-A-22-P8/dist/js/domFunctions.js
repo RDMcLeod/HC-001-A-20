@@ -112,6 +112,17 @@ const setFocusOnSearch = ()=> {
 const createCurrentConditionsDivs = (weatherObj, unit) => {
     const tempUnit = unit === "imperial" ? "F" : "C";
     const windUnit = unit === "imperial" ? "mpg" : "m/s";
-    const icon = createMainImgDiv(weatherObj.current.weather[0].icon, weatherObj.current.weather[0].description);
+    const icon = createMainImgDiv(
+        weatherObj.current.weather[0].icon, 
+        weatherObj.current.weather[0].description);
    
+}
+const createMainImgDiv = (icon, altText) => {
+    const iconDiv = createElem("div", "icon");
+    iconDiv.id = "icon";
+    const faIcon = translateIconToAwesome(icon);
+    faIcon.ariaHidden = true;
+    faIcon.title = alttext;
+    iconDiv.appendChild(faIcon);
+    return inconDiv;
 }

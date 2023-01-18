@@ -47,7 +47,7 @@ export const updateScreenReaderConfirmation = (message) => {
     updateScreenReaderConfirmation(ScreenReaderWeather);
     updateWeatherLocationHeader(locationObj,getName());
     //current conditions
-    const ccArray = createCurrentConditionsDivs(weatherJson, locationObj.getUnit());
+    const ccArray = createCurrentConditionsDiv(weatherJson, locationObj.getUnit());
     //six day forecast
     setFocusOnSearch();
     fadeDisplay();
@@ -109,7 +109,7 @@ const buildScreenReaderWeather = (weatherJson, locationObj) => {
 const setFocusOnSearch = ()=> {
     document.getElementById("searchBar__text").focus();
 }
-const createCurrentConditionsDivs = (weatherObj, unit) => {
+const createCurrentConditionsDiv = (weatherObj, unit) => {
     const tempUnit = unit === "imperial" ? "F" : "C";
     const windUnit = unit === "imperial" ? "mpg" : "m/s";
     const icon = createMainImgDiv(
@@ -132,5 +132,10 @@ const createElem = (elemType, divClassName, divText, Unit) => {
     if (divText) {
         divText.textContent = divText;
     }
-    
+    if (divClassName === "temp") {
+        const unitDiv = document.createElement("div");
+        unitDiv.classList.add("unit");
+        unitDiv.textContent = unit;
+        div.appendChild(unitDiv);
+    }
 }

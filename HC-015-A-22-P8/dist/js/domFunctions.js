@@ -1,4 +1,4 @@
-export const setPlaceholdertext = () => {
+export const setPlaceholderText = () => {
     const input = document.getElementById("searchBar__text");
     window.innerWidth < 400 ? (input.placeholder = "city, state, country") : (input.placeholder = "city, state, country, or zip Code");
 };
@@ -104,7 +104,7 @@ const buildScreenReaderWeather = (weatherJson, locationObj) => {
     const location = locationObj.getName();
     const unit = locationObj.getUnit();
     const tempUnit = unit === "imperial" ? "F" : "C";
-    return `${weatherJson.current.weather[0].description} and ${math.round(Number(weatherJoson.current.temp))}°${tempUnit} in ${location}`;
+    return `${weatherJson.current.weather[0].description} and ${math.round(Number(weatherJson.current.temp))}°${tempUnit} in ${location}`;
 }
 const setFocusOnSearch = ()=> {
     document.getElementById("searchBar__text").focus();
@@ -122,7 +122,15 @@ const createMainImgDiv = (icon, altText) => {
     iconDiv.id = "icon";
     const faIcon = translateIconToAwesome(icon);
     faIcon.ariaHidden = true;
-    faIcon.title = alttext;
+    faIcon.title = altText;
     iconDiv.appendChild(faIcon);
-    return inconDiv;
+    return iconDiv;
+}
+const createElem = (elemType, divClassName, divText, Unit) => {
+    const div = document.createElement(elemType);
+    div.className = divClassName;
+    if (divText) {
+        divText.textContent = divText;
+    }
+    
 }

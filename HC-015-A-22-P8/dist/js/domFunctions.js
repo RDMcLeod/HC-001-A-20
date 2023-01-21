@@ -115,7 +115,10 @@ const createCurrentConditionsDiv = (weatherObj, unit) => {
     const icon = createMainImgDiv(
         weatherObj.current.weather[0].icon, 
         weatherObj.current.weather[0].description);
-   const temp = createElem("div", "temp", `${Math.round(Number(weatherObj.current.temp))}°`)
+   const temp = createElem("div", "temp", `${Math.round(Number(weatherObj.current.temp))}°`);
+   const properDesc = toProperCase(weatherObj.current.weather[0].description);
+   const desc = createElem("div", "desc", properDesc);
+   const feels = createElem("div", "feels", `feels Like ${Math.round(Number(weatherObj.current.feels__like))}°`); 
 }
 const createMainImgDiv = (icon, altText) => {
     const iconDiv = createElem("div", "icon");

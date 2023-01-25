@@ -122,6 +122,8 @@ const createCurrentConditionsDiv = (weatherObj, unit) => {
    const maxTemp = createElem("div", "maxTemp", `High ${Math.round(Number(weatherObj.daily[0].temp.max))}°`);
    const minTemp = createElem("div", "minTemp", `Low ${Math.round(Number(weatherObj.daily[0].temp.min))}°`);
    const humidity = createElem("div", "humidity", `Humidity ${Math.round(Number(weatherObj.current.humidity))}%`);
+   const wind = createElem("div", "wind", `Wind ${Math.round(Number(weatherObj.current.wind_speed))} ${windUnit}`);
+
 
 }
 const createMainImgDiv = (icon, altText) => {

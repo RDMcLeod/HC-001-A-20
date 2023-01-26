@@ -105,10 +105,10 @@ const buildScreenReaderWeather = (weatherJson, locationObj) => {
     const unit = locationObj.getUnit();
     const tempUnit = unit === "imperial" ? "F" : "C";
     return `${weatherJson.current.weather[0].description} and ${math.round(Number(weatherJson.current.temp))}°${tempUnit} in ${location}`;
-}
+};
 const setFocusOnSearch = ()=> {
     document.getElementById("searchBar__text").focus();
-}
+};
 const createCurrentConditionsDiv = (weatherObj, unit) => {
     const tempUnit = unit === "imperial" ? "F" : "C";
     const windUnit = unit === "imperial" ? "mpg" : "m/s";
@@ -123,9 +123,9 @@ const createCurrentConditionsDiv = (weatherObj, unit) => {
    const minTemp = createElem("div", "minTemp", `Low ${Math.round(Number(weatherObj.daily[0].temp.min))}°`);
    const humidity = createElem("div", "humidity", `Humidity ${Math.round(Number(weatherObj.current.humidity))}%`);
    const wind = createElem("div", "wind", `Wind ${Math.round(Number(weatherObj.current.wind_speed))} ${windUnit}`);
+   return [icon, temp, desc, feels, maxTemp, minTemp, humidity, wind];     
 
-
-}
+};
 const createMainImgDiv = (icon, altText) => {
     const iconDiv = createElem("div", "icon");
     iconDiv.id = "icon";
@@ -134,18 +134,29 @@ const createMainImgDiv = (icon, altText) => {
     faIcon.title = altText;
     iconDiv.appendChild(faIcon);
     return iconDiv;
-}
+};
 const createElem = (elemType, divClassName, divText, Unit) => {
     const div = document.createElement(elemType);
     div.className = divClassName;
     if (divText) {
         divText.textContent = divText;
-    }
+    };
     if (divClassName === "temp") {
         const unitDiv = document.createElement("div");
         unitDiv.classList.add("unit");
         unitDiv.textContent = unit;
         div.appendChild(unitDiv);
-    }
+    };
     return div;
-}
+};
+const translateIconToAwesome = (icon) => {
+    const i = document.createElement("i");
+    const firstTwoChars = icon.slice(0,2);
+    const lastChar = icon.slice(2);
+    switch (firstTwoChars) {
+        case "01":
+            if (lastChar === "d") {
+                i.classList.add ("far", "fa-sun");
+            };
+    };
+};

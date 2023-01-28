@@ -163,11 +163,24 @@ const translateIconToAwesome = (icon) => {
             break;
         case "02":
             if (lastChar === "d") {
-                i.classList.add ("fas", "fa-sun");
+                i.classList.add ("fas", "fa-cloud-sun");
             } else {
-                i,classList.add("fas", "fa-moon");
+                i,classList.add("fas", "fa-cloud-moon");
             }
             break;
+        case "03":
+            i.classList.add("fas", "fa-cloud");
+            break;
+        case "04":
+            i.classList.add("fas", "fa-cloud-meatball");
+            break;
+        case "04":
+            i.classList.add("fas", "fa-cloud-meatball");
+            break;
+        case "09":
+            i.classList.add("fas", "fa-cloud-rain");
+            break;
+
 
     };
 };

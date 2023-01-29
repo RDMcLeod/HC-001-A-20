@@ -180,7 +180,16 @@ const translateIconToAwesome = (icon) => {
         case "09":
             i.classList.add("fas", "fa-cloud-rain");
             break;
-
+        case "10":
+            if (lastChar === "d") {
+                i.classList.add ("fas", "fa-cloud-sun-rain");
+            } else {
+                i,classList.add("fas", "fa-cloud-moon-rain");
+            }
+            break;
+        case "11":
+            i.classList.add("fas", "fa-poo-storm");
+            break;  
 
     };
 };

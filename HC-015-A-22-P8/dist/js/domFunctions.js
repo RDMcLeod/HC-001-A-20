@@ -33,8 +33,17 @@ const toProperCase = (text) => {
 
 const updateWeatherLocationHeader  = (message) => {
     const h1 = document.getElementById("currentForecast__location");
-    h1.textContent = message;
+    if (message.indexOf("Lat:") !== -1 && message.indexOf("Long:") !== -1) {
+      const msgArray = message.split("");
+      const mapArray = message.map(msg => {
+        return msg.replace( ":", ":");
+      });
+      const lat = mapArray[0].indexOf("-") === -1 ? mapArray[0].slice(0, 10) : mapArray[0].slice(0, 11);
+    } else {
+        h1.textContent = message;
+    }
 };
+
 export const updateScreenReaderConfirmation = (message) => {
     document.getElementById("confirmation").textContent = message;
 };

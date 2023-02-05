@@ -59,7 +59,8 @@ export const updateScreenReaderConfirmation = (message) => {
     updateWeatherLocationHeader(locationObj,getName());
     //current conditions
     const ccArray = createCurrentConditionsDiv(weatherJson, locationObj.getUnit());
-    //six day forecast
+    displayCurrentConditions(ccArray);
+    displaySixDayForecast(weatherJson);
     setFocusOnSearch();
     fadeDisplay();
 };

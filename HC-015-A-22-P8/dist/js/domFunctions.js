@@ -220,3 +220,9 @@ const displayCurrentConditions = (currentConditionsArray) => {
         ccContainer.appendChild(cc);
     });
 };
+const displaySixDayForecast = (weatherJson) => {
+    for (let i = 1; i <= 6; i++) {
+        const dfArray = createDailyWeatherDiv(weatherJson.daily[i]);
+        displaySixDayForecast(dfArray);
+    }
+}

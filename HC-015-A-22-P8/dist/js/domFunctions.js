@@ -224,5 +224,10 @@ const displaySixDayForecast = (weatherJson) => {
     for (let i = 1; i <= 6; i++) {
         const dfArray = createDailyWeatherDiv(weatherJson.daily[i]);
         displaySixDayForecast(dfArray);
-    }
+    };
+};
+const createDailyWeatherDiv = (dayWeather) => {
+    const dayAbbreviationText = getDayAbbreviation(dayWeather.dt);
+    const dayAbbreviation = createElem("p", "dayAbbreviation", dayAbbreviationText);
+    
 }

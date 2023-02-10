@@ -230,12 +230,21 @@ const createDailyWeatherDiv = (dayWeather) => {
     const dayAbbreviationText = getDayAbbreviation(dayWeather.dt);
     const dayAbbreviation = createElem("p", "dayAbbreviation", dayAbbreviationText);
     const dayIcon = createDailyForecastIcon(dayWeather.weather[0].icon, dayWeather.weather[0].description);
-    const dayHigh = createElem("p", "dayHigh", `${Math.round(Number(dayWeather.temp.max))}`)
+    const dayHigh = createElem("p", "dayHigh", `${Math.round(Number(dayWeather.temp.max))}°`);
+    const dayLow = createElem("p", "datLow", `${Math.round (number(dayWeather.temp.min))}°`)
 };
 const getDayAbbreviation = (data) => {
     const dateObj = new Date (data * 1000);
     const utcString = dateObj.toUTCString();
     return utcString.slice(0, 3).toUpperCase();
 };
-
-  
+const createDailyForecastIcon = (icon, altText) => {
+    const img = document.createElement("img");
+    if (window.innerWidth < 768 || window.innerHeight < 1025) {
+      img.src = `https://openweathermap.org/img/wn/${icon}.png`;
+    } else {
+      img.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+    }
+    img.alt = altText;
+    return img;
+  };

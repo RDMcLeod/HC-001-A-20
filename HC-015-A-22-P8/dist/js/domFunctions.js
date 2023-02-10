@@ -230,11 +230,12 @@ const createDailyWeatherDiv = (dayWeather) => {
     const dayAbbreviationText = getDayAbbreviation(dayWeather.dt);
     const dayAbbreviation = createElem("p", "dayAbbreviation", dayAbbreviationText);
     const dayIcon = createDailyForecastIcon(dayWeather.weather[0].icon, dayWeather.weather[0].description);
+    const dayHigh = createElem("p", "dayHigh", `${Math.round(Number(dayWeather.temp.max))}`)
 };
 const getDayAbbreviation = (data) => {
     const dateObj = new Date (data * 1000);
     const utcString = dateObj.toUTCString();
     return utcString.slice(0, 3).toUpperCase();
-}
+};
 
   

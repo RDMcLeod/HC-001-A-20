@@ -231,7 +231,8 @@ const createDailyWeatherDiv = (dayWeather) => {
     const dayAbbreviation = createElem("p", "dayAbbreviation", dayAbbreviationText);
     const dayIcon = createDailyForecastIcon(dayWeather.weather[0].icon, dayWeather.weather[0].description);
     const dayHigh = createElem("p", "dayHigh", `${Math.round(Number(dayWeather.temp.max))}°`);
-    const dayLow = createElem("p", "datLow", `${Math.round (number(dayWeather.temp.min))}°`)
+    const dayLow = createElem("p", "datLow", `${Math.round (number(dayWeather.temp.min))}°`);
+    return [dayAbbreviation, dayIcon, dayHigh, dayLow]
 };
 const getDayAbbreviation = (data) => {
     const dateObj = new Date (data * 1000);
@@ -247,4 +248,10 @@ const createDailyForecastIcon = (icon, altText) => {
     }
     img.alt = altText;
     return img;
+  };
+  const displayDailyForecast = (dfArray) => {
+    const dayDiv = createElem("div", "forecastDay");
+    dfArray.forEach(el => {
+        dayDiv.appendChild(el);
+    });
   };

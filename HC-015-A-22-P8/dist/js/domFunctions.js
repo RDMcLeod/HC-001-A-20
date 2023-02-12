@@ -254,4 +254,6 @@ const createDailyForecastIcon = (icon, altText) => {
     dfArray.forEach(el => {
         dayDiv.appendChild(el);
     });
+    const dailyForecastContainer = document.getElementById("dailyForecast__contents");
+    dailyForecastContainer.appendChild(dayDiv);
   };

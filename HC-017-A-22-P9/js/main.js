@@ -21,5 +21,9 @@ const generateNames = () => {
     const randomNumArr = [];
     for (let i = 0; i < 4;) {
         const randomNumber = Math.floor(Math.random() * 10);
+        if (randomNumArr.includes(randomNumber)) continue;
+        randomNumArr.push(randomNumber);
+        i++;
     }
+    const suggestion1 = namesOne[randomNumArr[0]] + namesTwo[randomNumArr[3]]
 }

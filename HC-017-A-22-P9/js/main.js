@@ -4,7 +4,8 @@ const initApp = () => {
     document.getElementById("submitForm").addEventListener("submit", (event) => {
         event.preventDefault();
         clearSuggestions();
-        //generateNames
+        const namesArray = generateNames();
+        console.log(namesArray)
         //displayNames
     });
 };
@@ -32,3 +33,7 @@ const generateNames = () => {
 
     return [suggestion1, suggestion2, suggestion3, suggestion4];
 };
+const displayNames = (namesArray) => {
+    const list = document.querySelector('.suggestionSection ol');
+    const rawFirstName = document.getElementById("submitSection__textInput").value;
+}

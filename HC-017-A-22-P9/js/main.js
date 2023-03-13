@@ -37,6 +37,10 @@ const displayNames = (namesArray) => {
     const list = document.querySelector('.suggestionSection ol');
     const rawFirstName = document.getElementById("submitSection__textInput").value;
     namesArray.forEach(name => {
-        list.innerHTML = `<li><a href="http://youtube.com/${name}" target =">${name}</a></li>`
+        list.innerHTML = `<li><a href="http://youtube.com/${name}" target =">${name}</a></li>`;
+        list.innerHTML += `<ul>
+            <li><a href="https://youtube.com/${firstName}s${name}" target="_blank">${firstName}s${name}</a></li> 
+            <li><a href="https://youtube.com/${name}With${firstName}" target="_blank">${name}With${firstName}</a></li>
+            </ul>`;
     });
 }

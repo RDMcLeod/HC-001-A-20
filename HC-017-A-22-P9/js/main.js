@@ -5,8 +5,8 @@ const initApp = () => {
         event.preventDefault();
         clearSuggestions();
         const namesArray = generateNames();
-        console.log(namesArray)
-        //displayNames
+        console.log(namesArray);
+        displayNames(namesArray);
     });
 };
 
@@ -36,6 +36,7 @@ const generateNames = () => {
 const displayNames = (namesArray) => {
     const list = document.querySelector('.suggestionSection ol');
     const rawFirstName = document.getElementById("submitSection__textInput").value;
+    const firstName = sanitizeInput(rawFirstName);
     namesArray.forEach(name => {
         list.innerHTML = `<li><a href="http://youtube.com/${name}" target =">${name}</a></li>`;
         list.innerHTML += `<ul>

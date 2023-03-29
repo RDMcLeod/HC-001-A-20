@@ -64,3 +64,20 @@ section {
     border-radius: 10px;
     outline: none;
 }
+.submitSection__form input {
+    width: calc(100% - 60px);
+}
+
+.submitSection__form button {
+    min-width: 48px;
+    min-height: 48px;
+    cursor: pointer;
+    background-color: limegreen;
+    color: #fff;
+    letter-spacing: 1.35px;
+    font-weight: bold;
+}
+
+.suggestionSection {
+    padding-top: 20px;
+}

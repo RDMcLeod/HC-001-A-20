@@ -17,3 +17,11 @@ const clearSuggestions = () => {
     const list = document.querySelector('.suggestionSection ol');
     list.innerHTML = "";
 };
+const generateNames = () => {
+    const randomNumArr = [];
+    for (let i = 0; i < 4;) {
+        const randomNumber = Math.floor(Math.random() * 10);
+        if (randomNumArr.includes(randomNumber)) continue;
+        randomNumArr.push(randomNumber);
+        i++;
+    }}

@@ -10,3 +10,15 @@ export const namesOne = {
     8: "Web", 
     9: "Tech"  
 }
+export const namesTwo = {
+    0: "Life", 
+    1: "MadeEasy", 
+    2: "Programmer", 
+    3: "Simplified", 
+    4: "Development", 
+    5: "World",
+    6: "Media", 
+    7: "Developer", 
+    8: "Stacker", 
+    9: "WebDev"
+}

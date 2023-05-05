@@ -24,4 +24,4 @@ const generateNames = () => {
         if (randomNumArr.includes(randomNumber)) continue;
         randomNumArr.push(randomNumber);
         i++;
-    };
+    }}

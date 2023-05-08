@@ -24,4 +24,11 @@ const generateNames = () => {
         if (randomNumArr.includes(randomNumber)) continue;
         randomNumArr.push(randomNumber);
         i++;
-    }}
+    };
+    const suggestion1 = namesOne[randomNumArr[0]] + namesTwo[randomNumArr[3]];
+    const suggestion2 = namesOne[randomNumArr[1]] + namesTwo[randomNumArr[0]];
+    const suggestion3 = namesOne[randomNumArr[2]] + namesTwo[randomNumArr[2]];
+    const suggestion4 = namesOne[randomNumArr[3]] + namesTwo[randomNumArr[1]];
+
+    return [suggestion1, suggestion2, suggestion3, suggestion4];
+};

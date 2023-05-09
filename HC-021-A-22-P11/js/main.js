@@ -32,3 +32,7 @@ const generateNames = () => {
 
     return [suggestion1, suggestion2, suggestion3, suggestion4];
 };
+const displayNames = (namesArray) => {
+    const list = document.querySelector('.suggestionSection ol');
+    const rawFirstName = document.getElementById("submitSection__textInput").value;
+    const firstName = sanitizeInput(rawFirstName);

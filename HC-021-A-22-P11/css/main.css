@@ -40,3 +40,16 @@ h1 {
     text-align: center;
     display: block;
 }
+main {
+    margin-top: 10px;
+}
+
+section {
+    position: relative;
+}
+
+.submitSection__form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

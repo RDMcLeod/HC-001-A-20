@@ -53,3 +53,13 @@ section {
     display: flex;
     justify-content: space-between;
 }
+.submitSection__form input, 
+.submitSection__form button {
+    font-size: 1.25rem;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+.submitSection__form input {
+    width: calc(100% - 60px);
+}
